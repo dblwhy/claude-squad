@@ -21,7 +21,7 @@ Take the following actions:
 
 ## Command you send
 ```bash
-./agent-send.sh leader1 "Complete all the todo tickets "
+./agent-send.sh leader1 "Complete all the todo tickets"
 ```
 
 ## Expected report

@@ -51,7 +51,7 @@ multiagent:
       instruction: instructions/coder.md
 ```
 
-## 🚀 Run the system
+## 🚀 4. Run the system
 ```bash
 ./setup.sh
 ```
@@ -63,30 +63,54 @@ This will:
 - Assign titles and instructions to each pane
 - Start Claude in each pane with the correct prompt
 
+## 🖥️ 5. Open the agent consoles
+
+In one terminal window:
+
+```bash
+tmux attach-session -t president
+```
+
+In a separate terminal window:
+
+```bash
+tmux attach-session -t multiagent
+```
+
+## 🏁 6. Kick Off the Mission!
+
+Once you're inside the `president` tmux session, you can start the workflow by instructing the leader to begin processing tickets.
+
+Inside the `president` session type in:
+
+```bash
+Complete all the todo tickets
+```
+
 ## 🧠 How It Works
 
 Each agent:
 
 - Loads its identity and task from agents.yaml
 - Follows instructions in instructions/{agent}.md
-- Uses ./agent-send.sh or ./test.sh to message other agents
+- Uses ./agent-send.sh to message other agents
 
 Tickets live under:
 
 ```bash
 tickets/
 ├── reference/ # Images or whatever you want reference in the ticket
-├── todo/    # Incoming tasks
-└── done/    # Completed tasks
+├── todo/      # Incoming tasks
+└── done/      # Completed tasks
 ```
 
 ## 💬 Example: Send a message
 ```bash
-./test.sh coder1 "Please start working on ticket_001.txt"
+sh ./agent-send.sh coder1 "Please start working on 001_ticket_001.md"
 ```
 
 ```bash
-./agent-send.sh leader1 "ticket ticket_001.txt completed"
+sh ./agent-send.sh leader1 "ticket 001_ticket.md completed"
 ```
 
 ## ✅ Best Practices
