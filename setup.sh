@@ -75,14 +75,29 @@ log "Starting agents..."
 
 if [[ "$($YQ_BIN '.president.enabled' "$CONFIG_FILE")" == "true" ]]; then
     instruction_path=$($YQ_BIN '.president.instruction' "$CONFIG_FILE")
-    tmux send-keys -t president "claude \"You are president. Follow the instruction in $instruction_path\"" C-m
+    skip_permissions=$($YQ_BIN '.president.skip_permissions // false' "$CONFIG_FILE")
+
+    if [[ "$skip_permissions" == "true" ]]; then
+        launch_command="claude --dangerously-skip-permissions \"You are president. Follow the instruction in $instruction_path\""
+    else
+        launch_command="claude \"You are president. Follow the instruction in $instruction\""
+    fi
+
+    tmux send-keys -t president "$launch_command" C-m
 fi
 for i in "${!AGENT_NAMES[@]}"; do
     pane_id="${PANE_IDS[$i]}"
     name="${AGENT_NAMES[$i]}"
     instruction_path=$($YQ_BIN ".multiagent.panes[$i].instruction" "$CONFIG_FILE")
+    skip_permissions=$($YQ_BIN ".multiagent.panes[$i].skip_permission // false" "$CONFIG_FILE")
 
-    tmux send-keys -t "$pane_id" "claude \"follow the instruction in $instruction_path\"" C-m
+    if [[ "$skip_permissions" == "true" ]]; then
+        launch_command="claude --dangerously-skip-permissions \"follow the instruction in $instruction_path\""
+    else
+        launch_command="claude \"follow the instruction in $instruction_path\""
+    fi
+
+    tmux send-keys -t "$pane_id" "$launch_command" C-m
 done
 
 echo ""
