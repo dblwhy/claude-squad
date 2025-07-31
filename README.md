@@ -51,7 +51,7 @@ multiagent:
       instruction: instructions/coder.md
 ```
 
-## 🚀 4. Run the system
+### 4. Run the system
 ```bash
 ./setup.sh
 ```
@@ -63,7 +63,7 @@ This will:
 - Assign titles and instructions to each pane
 - Start Claude in each pane with the correct prompt
 
-## 🖥️ 5. Open the agent consoles
+### 5. Open the agent consoles
 
 In one terminal window:
 
@@ -77,7 +77,7 @@ In a separate terminal window:
 tmux attach-session -t multiagent
 ```
 
-## 🏁 6. Kick Off the Mission!
+### 6. Kick Off the Mission!
 
 Once you're inside the `president` tmux session, you can start the workflow by instructing the leader to begin processing tickets.
 
