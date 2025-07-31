@@ -81,11 +81,7 @@ tmux attach-session -t multiagent
 
 Once you're inside the `president` tmux session, you can start the workflow by instructing the leader to begin processing tickets.
 
-Inside the `president` session type in:
-
-```bash
-Complete all the todo tickets
-```
+Inside the `president` session, select "Yes" to start.
 
 ## 🧠 How It Works
 
