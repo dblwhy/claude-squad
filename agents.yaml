@@ -1,0 +1,13 @@
+president:
+  enabled: true
+  instruction: "@instructions/president.md"
+
+multiagent:
+  window_name: agents
+  panes:
+    - name: leader1
+      instruction: "@instructions/leader.md"
+    - name: coder1
+      instruction: "@instructions/coder.md"
+    - name: coder2
+      instruction: "@instructions/coder.md"
