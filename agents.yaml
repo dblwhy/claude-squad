@@ -1,13 +1,17 @@
 president:
   enabled: true
   instruction: "@instructions/president.md"
+  skip_permission: false
 
 multiagent:
   window_name: agents
   panes:
     - name: leader1
       instruction: "@instructions/leader.md"
+      skip_permission: true
     - name: coder1
       instruction: "@instructions/coder.md"
+      skip_permission: true
     - name: coder2
       instruction: "@instructions/coder.md"
+      skip_permission: true
