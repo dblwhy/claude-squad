@@ -74,8 +74,8 @@ log_success "✅ Setup complete!"
 log "Starting agents..."
 
 if [[ "$($YQ_BIN '.president.enabled' "$CONFIG_FILE")" == "true" ]]; then
-    instruction=$($YQ_BIN '.president.instruction' "$CONFIG_FILE")
-    tmux send-keys -t president "claude \"follow the instruction in $instruction_path\"" C-m
+    instruction_path=$($YQ_BIN '.president.instruction' "$CONFIG_FILE")
+    tmux send-keys -t president "claude \"You are president. Follow the instruction in $instruction_path\"" C-m
 fi
 for i in "${!AGENT_NAMES[@]}"; do
     pane_id="${PANE_IDS[$i]}"
