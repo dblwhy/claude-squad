@@ -1,6 +1,6 @@
-# 🤖 claude-squad
+# 🤖 claude-ticketeer
 
-**claude-squad** is a terminal-based multi-agent system where Claude agents collaborate to complete markdown-defined tasks (called "tickets"). Each agent runs in a separate tmux pane, follows role-specific instructions, and communicates using natural language through a message-sending CLI.
+**claude-ticketeer** is a terminal-based multi-agent system where Claude agents collaborate to complete markdown-defined tasks (called "tickets"). Each agent runs in a separate tmux pane, follows role-specific instructions, and communicates using natural language through a message-sending CLI.
 
 ---
 
@@ -28,8 +28,8 @@ brew install tmux yq # macOS
 ### 2. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/claude-squad.git
-cd claude-squad
+git clone https://github.com/your-username/claude-ticketeer.git
+cd claude-ticketeer
 ```
 
 ### 3. Define your agents
