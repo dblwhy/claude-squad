@@ -15,6 +15,10 @@ Build a Chat interface within the `dashboard` project that mimics the look and f
    - Optional: “loading” message bubble placeholder
 3. Ensure mobile responsiveness and keyboard accessibility
 
+## Ticket Dependency
+
+- This ticket is blocked by 001_example.md.
+
 ## Acceptance Criteria:
 
 A functional, styled ChatGPT-like UI on the home page that is ready to integrate with a backend model in a future ticket.

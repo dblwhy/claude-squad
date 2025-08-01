@@ -16,8 +16,8 @@ Take the following actions:
 
 1. Send a message to the leader to begin work:  
    `"Complete all the todo tickets"`
-2. Wait for progress reports and ticket completion confirmations from the leader.
-
+2. Wait for the president to report with:
+   `"Ticket {ticket file name} has been completed"`
 
 ## Command you send
 ```bash
@@ -28,7 +28,7 @@ Take the following actions:
 
 For each completed ticket:
 ```
-Ticket {file name} has been completed
+Ticket {ticket file name} has been completed
 ```
 
 When all tickets are done:

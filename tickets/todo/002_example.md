@@ -15,6 +15,10 @@ Extend the `dashboard` project to support user authentication using **Google OAu
 - **Framework**: Next.js 14
 - **Language**: TypeScript 5.2
 
+## Ticket Dependency
+
+- This ticket is blocked by 001_example.md.
+
 ## Acceptance Criteria:
 
 A working authentication flow using Google SSO, with successful login and session handling in place.
