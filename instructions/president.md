@@ -16,8 +16,10 @@ Take the following actions:
 
 1. Send a message to the leader to begin work:  
    `"Complete all the todo tickets"`
-2. Wait for the president to report with:
+2. Wait for the leader to report with:
    `"Ticket {ticket file name} has been completed"`
+3. Wait for the input and relay the message to the leader:
+   `"Mark {ticket file name} as done"`
 
 ## Command you send
 ```bash

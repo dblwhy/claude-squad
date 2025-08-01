@@ -31,6 +31,9 @@ Your primary role is to manage the coders, assign tickets, and coordinate with t
 # Assign a ticket to a coder
 ./agent-send.sh coder1 "Start {ticket file name}"
 
+# Send any message to the coder
+./agent-send.sh coder1 "{message here}"
+
 # Notify the president when a ticket is completed
 ./agent-send.sh president "Ticket 001_ticket.md has been completed"
 ```

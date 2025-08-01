@@ -17,5 +17,9 @@ Your job is to wait for instructions from your leader and complete the assigned 
 3. Once completed, notify your leader that the ticket is done by sending:
 
 ```bash
+# Notify the leader when a ticket is completed
 ./agent-send.sh leader1 "ticket {ticket file name} is completed"
+
+# Send any message to the leader
+./agent-send.sh leader1 "{message here}"
 ```
